@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
 
-admin.site.site_header = 'Taos Haus Tech'
+admin.site.site_header = 'Voki Digital'
 admin.site.index_title = 'THTS Data'
 
 urlpatterns = [
