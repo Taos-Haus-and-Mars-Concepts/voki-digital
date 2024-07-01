@@ -1,9 +1,29 @@
 {% extends 'frontend/base.html' %}
 {% load static %}
 {% block title %}Who is Voki Digital{% endblock %}
+{% block pagecss %}
+    <style>
+        .slide-in-left {
+            position: relative;
+            animation: slideInLeft 1s forwards;
+            opacity: 0;
+        }
 
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+{% endblock %}
 
 {% block main-body %}
+
 
  <!-- ======= Hero Section ======= -->
   <section id="team_ecom" class="d-flex pt-5 justify-content-center">
@@ -17,6 +37,13 @@
      {% include 'frontend/contact_calendly.html' %}
     </section><!-- End Contact Section --> 
 
-    
+       <script>
+        $(document).ready(function() {
+            $('.slide-in-left').each(function(index) {
+                $(this).css('animation-delay', index * 0.5 + 's');
+                $(this).css('opacity', 1);
+            });
+        });
+    </script>
 
 {% endblock %}

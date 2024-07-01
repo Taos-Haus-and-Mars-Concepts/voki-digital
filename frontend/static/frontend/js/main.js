@@ -360,23 +360,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        var defText = document.getElementById("unique-navbar-tech");
-        var lastScrollTop = 0;
 
-        window.addEventListener("scroll", function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop) {
-                // Scroll Down
-                navbar.classList.add("hidden");
-            } else {
-                // Scroll Up
-                navbar.classList.remove("hidden");
-            }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        }, false);
-    });
 
 

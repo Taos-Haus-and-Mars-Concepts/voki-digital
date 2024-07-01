@@ -62,11 +62,15 @@ class MainPageView(View):
         return render(request, 'frontend/index.html', context)
 
 
-class EcomPageView(View):
-    def get(self, request):
-        contact_form = ContactForm()
-        context = {'contact_form': contact_form}
-        return render(request, 'frontend/index_ecom.html', context)
+class EcomPageView(TemplateView):
+    template_name = 'frontend/index_ecom.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contact_form'] = ContactForm()
+        return context
+
+
 
 
 class WebPageView(View):
@@ -103,7 +107,12 @@ class StagePageView(View):
         context = {'contact_form': contact_form}
         return render(request, 'frontend/stageing.html', context)
 
-
+class CustSoftPageView(TemplateView):
+    template_name = 'frontend/index_cust_soft.html'
+    def get(self, request):
+        contact_form = ContactForm()
+        context = {'contact_form': contact_form}
+        return context
 
 
 

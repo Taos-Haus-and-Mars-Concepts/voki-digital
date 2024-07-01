@@ -11,7 +11,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='tech-solutions/')),
     path('admin/', admin.site.urls),
     path('tech-solutions/', include('frontend.urls')),
-    path('dj/', include('djapp.urls')),
+
 
 ]
 if settings.DEBUG:
