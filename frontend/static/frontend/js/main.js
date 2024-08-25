@@ -356,6 +356,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }, false);
     });
 
+// Select the nav element and the about section
+const nav = document.querySelector('#unique-navbar-tech');
+const aboutSection = document.querySelector('#about');
+
+// Create an intersection observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Check if the about section is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // If it is, change the nav text color to black
+            nav.style.color = 'black';
+        } else {
+            // If it isn't, change the nav text color back to its original color
+            nav.style.color = ''; // Set this to the original color or leave empty to revert to CSS default
+        }
+    });
+}, { threshold: 0.5 }); // Adjust the threshold as needed
+
+// Observe the about section
+observer.observe(aboutSection);
 
 
 
