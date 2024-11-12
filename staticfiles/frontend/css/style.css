@@ -480,8 +480,7 @@ h6 {
 
 #hero .icon-box:hover {
   border-color: #ffc451;
-  background: rgb(237,7,7);
-background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgba(125,29,160,1) 75%);
+
 }
 
 @media (min-width: 1024px) {
@@ -1568,7 +1567,7 @@ section {
 
 
 .overlay-aboutsec {
-  opacity: 0;
+  opacity: 1;
   transition: transform 1s;
 }
 
@@ -1583,12 +1582,7 @@ section {
   margin: 20px;
 }
 
-.img-hover:hover {
 
-opacity: .5;
-background-color: rgba(217, 255, 0, 0.472);
-
-}
 
 
 .img-hover {
@@ -1718,19 +1712,7 @@ background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgb
             overflow-y: auto; /* Add scroll if content overflows */
         }
 
-        .icon-box:hover .default-content {
-            opacity: 0;
-            visibility: hidden;
-        }
 
-        .icon-box:hover .hover-content {
-            opacity: 1;
-            visibility: visible;
-            font-size: 18px;
- text-shadow: 0px 3px 3px rgba(7, 7, 7, 0.5);
- font-weight: bold;
- text-align: left !important;
-        }
 
         @media (max-width: 767px) {
             .icon-box {
@@ -1747,7 +1729,7 @@ background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgb
         }
 
 
-#about-background {
+body {
   background: linear-gradient(300deg,#ad9c40,#aa3bc3,#bab20d,#f58e3f);
   background-size: 240% 240%;
   animation: gradient-animation 20s ease infinite;

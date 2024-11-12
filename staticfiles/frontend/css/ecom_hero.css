@@ -1,20 +1,18 @@
 #hero_ecom {
     width: 100%;
-    height: 100vh; /* Ensure it takes the full viewport height */
-    background: url("../img/img-new/Voki_Digital_transparent.png") center center no-repeat;
-    background-size: contain; /* Adjust size as needed */
-    background-attachment: fixed; /* Make the background image stationary */
+    height: 100vh;
+    background: url("../img/img-new/bg-hero.jpg") top center;
+    background-size: cover;
     position: relative;
-}
-#team_ecom {
-    width: 100%;
-    height: 100vh; /* Ensure it takes the full viewport height */
-    background: url("../img/img-new/Voki_Digital_transparent.png") center center no-repeat;
-    background-size: contain; /* Adjust size as needed */
-    background-attachment: fixed; /* Make the background image stationary */
-    position: relative;
-}
+  }
 
+  #team_ecom {
+    width: 100%;
+
+    background: url("../img/img-new/bg-hero.jpg") top center;
+    background-size: cover;
+    position: relative;
+  }
   #container-success {
     width: 100%;
     height: 100vh;
@@ -94,7 +92,7 @@
   }
   
   @media (min-width: 1024px) {
-    #hero_ecom, #team_ecom {
+    #hero_ecom {
       background-attachment: fixed;
     }
   }
