@@ -337,3 +337,25 @@ document.addEventListener('DOMContentLoaded', function () {
     changeMedia();
 });
 
+
+
+const cardSlider = document.querySelector('.cards-container');
+let currentIndex = 0;
+const cardWidth = 280; // Adjusted card width including margin
+
+// Left Arrow Click Event
+document.querySelector('.arrow-left').addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        cardSlider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+});
+
+// Right Arrow Click Event
+document.querySelector('.arrow-right').addEventListener('click', () => {
+    const maxIndex = cardSlider.children.length - Math.floor(document.querySelector('.card-slider').offsetWidth / cardWidth);
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        cardSlider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+});
