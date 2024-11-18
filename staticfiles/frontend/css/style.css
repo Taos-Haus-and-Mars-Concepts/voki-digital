@@ -19,8 +19,12 @@ a:hover {
   text-decoration: none;
 }
 
+.new-font {
+
+  font-family: 'Rambors', sans-serif;}
+
 .email, .phone, .address {
-color: white;
+color: white !important;
 }
 
 /*--------------------------------------------------------------
@@ -495,6 +499,7 @@ body * {
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
+    height: 100%;
   }
 }
 
@@ -1251,7 +1256,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #151515;
+  color: rgba(255,255,255,1);
 }
 
 
@@ -1875,4 +1880,15 @@ background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgb
 
 .arrow-right {
     right: 10px;
+}
+
+
+.text-outline-white {
+  color: black; /* Inside fill color */
+  text-shadow:
+    1px 1px 0 white, /* Outline: right-bottom */
+    -1px 1px 0 white, /* Outline: left-bottom */
+    1px -1px 0 white, /* Outline: right-top */
+    -1px -1px 0 white; /* Outline: left-top */
+  font-weight: bold; /* Optional: for better visibility */
 }
