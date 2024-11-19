@@ -1,13 +1,18 @@
 
 body {
-     font-family: 'Rambors', sans-serif;
+ font-family: 'Futura PT', sans-serif;
 
-  color: #444444;
+
+
 
 }
 
+i {
+color: rgba(192, 192, 192, 0.5);
+}
+
 nav {
-font-family: 'Rambors', sans-serif;
+
 }
 a {
   color: #382c13;
@@ -21,10 +26,10 @@ a:hover {
 
 .new-font {
 
-  font-family: 'Rambors', sans-serif;}
+  }
 
 .email, .phone, .address {
-color: white !important;
+color: #C0C0C0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -445,7 +450,7 @@ body * {
   font-weight: 700;
   line-height: 64px;
   color: #fff;
-  font-family: 'Rambors', sans-serif;
+  
                                                 
 }
 
@@ -470,7 +475,7 @@ body * {
 #hero .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #ffc451;
+  color: rgba(75, 0, 130, 0.5);
 }
 
 #hero .icon-box h3 {
@@ -540,7 +545,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: 'Rambors', sans-serif;
+  
                                                 
 }
 
@@ -559,7 +564,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Rambors', sans-serif;
+  
                                                 
   color: rgba(255,255,255,.9);
 }
@@ -570,7 +575,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 28px;
-  font-family: 'Rambors', sans-serif;
+  
                                                 
 }
 
@@ -1004,7 +1009,7 @@ section {
   margin-top: 20px;
   color: #3b3b3b;
   font-size: 15px;
-  font-family: 'Rambors', sans-serif;
+  
                                                 
   transition: ease-in-out 0.3s;
 }
@@ -1239,8 +1244,8 @@ section {
 
 .contact :is(.info,.phone,.email) i {
   font-size: 20px;
-  background: #ffc451;
-  color: #151515;
+  background: #6A0DAD;
+  color:  #C0C0C0;
   float: left;
   width: 44px;
   height: 44px;
@@ -1654,7 +1659,7 @@ section {
 
       }
 .element-txt-shad {
-    color: white; /* Text color */
+    color: #C0C0C0; /* Text color */
     text-shadow:
         -2px -2px 0 black,   /* Top-left shadow */
         2px -2px 0 black,    /* Top-right shadow */
@@ -1699,7 +1704,7 @@ background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgb
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            color: white;
+            color: #C0C0C0;
             transition: transform 0.3s ease;
             background: rgba(0,0,0,0.5)
         }
@@ -1886,9 +1891,9 @@ background: linear-gradient(4deg, rgba(237,7,7,1) 13%, rgba(29,30,16,1) 46%, rgb
 .text-outline-white {
   color: black; /* Inside fill color */
   text-shadow:
-    1px 1px 0 white, /* Outline: right-bottom */
-    -1px 1px 0 white, /* Outline: left-bottom */
-    1px -1px 0 white, /* Outline: right-top */
-    -1px -1px 0 white; /* Outline: left-top */
+    .5px .5px 0 white, /* Outline: right-bottom */
+    -.5px .5px 0 white, /* Outline: left-bottom */
+    .5px -.5px 0 white, /* Outline: right-top */
+    -.5px -.5px 0 white; /* Outline: left-top */
   font-weight: bold; /* Optional: for better visibility */
 }
