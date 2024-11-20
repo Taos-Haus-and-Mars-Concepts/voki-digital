@@ -24,8 +24,8 @@ a:hover {
   text-decoration: none;
 }
 
-.new-font {
-
+.new-font-color {
+color: rgba(192, 192, 192, 0.5);
   }
 
 .email, .phone, .address {
@@ -42,7 +42,7 @@ color: #C0C0C0 !important;
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ffc451;
+  background: rgba(192, 192, 192, 0.1);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -51,7 +51,7 @@ color: #C0C0C0 !important;
 
 .back-to-top i {
   font-size: 28px;
-  color: #151515;
+  color:  #6A0DAD;
   line-height: 0;
 }
 
@@ -60,7 +60,7 @@ color: #C0C0C0 !important;
 }
 
 .back-to-top:hover i {
-  color: #ffc451;
+  color: rgba(192, 192, 192, 0.5);
 }
 
 .back-to-top.active {
