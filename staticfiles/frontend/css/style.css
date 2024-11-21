@@ -42,7 +42,7 @@ color: #C0C0C0 !important;
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: rgba(192, 192, 192, 0.5);
+  background: rgba(192, 192, 192, 0.1);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -497,7 +497,7 @@ body * {
 }
 
 #hero .icon-box:hover {
-  border-color: #ffc451;
+  border-color: #6A0DAD;
 
 }
 

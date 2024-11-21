@@ -115,11 +115,15 @@
   position: relative;
   color: black !important;
   z-index: 1; /* Ensures the text appears above the pseudo-element */
-   text-shadow:
-    1px 1px 0 #4B0082,  /* Right bottom */
-    -1px -1px 0 #4B0082, /* Left top */
-    1px -1px 0 #4B0082,  /* Right top */
-    -1px 1px 0 #4B0082;  /* Left bottom */
+  text-shadow:
+    0.5px 0.5px 0 rgba(192, 192, 192, 0.5),   /* Outer white outline - Right bottom */
+    -0.5px -0.5px 0 rgba(192, 192, 192, 0.5), /* Outer white outline - Left top */
+    0.5px -0.5px 0 rgba(192, 192, 192, 0.5),  /* Outer white outline - Right top */
+    -0.5px 0.5px 0 rgba(192, 192, 192, 0.5),  /* Outer white outline - Left bottom */
+    1px 1px 0 #4B0082,       /* Inner purple shadow - Right bottom */
+    -1px -1px 0 #4B0082,     /* Inner purple shadow - Left top */
+    1px -1px 0 #4B0082,      /* Inner purple shadow - Right top */
+    -1px 1px 0 #4B0082;      /* Inner purple shadow - Left bottom */
 }
 
 .highlight::before {
@@ -134,6 +138,8 @@
   z-index: -1; /* Places the line behind the text */
   transform-origin: left center;
 }
+
+
 
   </style>
 
@@ -164,6 +170,7 @@
     transition: transform 0.3s ease-in-out;
 }
     </style>
+
 
 <style>
 .img-overlay {
