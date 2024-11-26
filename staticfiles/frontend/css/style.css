@@ -1,11 +1,35 @@
+:root {
+  --indigo: #4b0082;
+  --silver: #c0c0c0;
+  --gold: #ffd584;
+  --cyan: #00ffff;
 
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
- 
 }
 
+h1, h2 {
+  font-family: 'Futura', sans-serif;
+  font-weight: 500;
+}
 
+h3, h4, h5, h6 {
+  font-family: 'Futura', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  font-family: 'JetBrains', monospace;
+  font-weight: 300;
+}
+
+strong, b {
+  font-family: 'JetBrains', monospace;
+  font-weight: 500;
+}
+
+h3 {
+  color: var(--silver);
+
+}
 
 a {
   color: #382c13;
@@ -13,17 +37,52 @@ a {
 }
 
 a:hover {
-  color: #ffd584;
+  color: var(--cyan);;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
+.new-font-color {
+  color: var(--silver);
+  }
+
+.email, .phone, .address {
+  color: var(--silver);
+}
+
+i {
+  color: var(--cyan);
+}
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Futura';
+  src: url('frontend/static/frontend/fonts/FuturaStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('frontend/static/frontend/fonts/FuturaStd-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('frontend/static/frontend/fonts/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('frontend/static/frontend/fonts/JetBrainsMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 /*--------------------------------------------------------------
@@ -146,7 +205,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-#  Get Startet Button
+#  Get Started Button
 --------------------------------------------------------------*/
 .get-started-btn {
   color: #fff;
@@ -397,8 +456,8 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/img-new/bg-hero.jpg") top center;
+  height: 100%;
+  background: url("../img/img-new/hero-motherboard-dark.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -441,9 +500,14 @@ h6 {
 }
 
 #hero h2 {
+  font-family: 'JetBrains', monospace;
   color: rgba(255, 255, 255, 0.9);
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 22px;
+}
+
+.hero-subtitle {
+  margin-top: 30px;
 }
 
 #hero .icon-box {
@@ -452,21 +516,27 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.3);
   height: 100%;
   text-align: center;
+  background-color: rgba(75, 0, 130, 0.1);
+  /* background-image: url(http://www.transparenttextures.com/patterns/bo-play.png); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png"); */
+  background-image: url(http://www.transparenttextures.com/patterns/dotnoise-light-grey.png);
 }
 
 #hero .icon-box i {
   font-size: 32px;
-  line-height: 1;
-  color: #ffc451;
+  line-height: 2;
+  color: var(--silver);
+  background-color: var(--indigo);
+  padding: 10px;
+  border-radius: 100px;
 }
 
 #hero .icon-box h3 {
-  font-weight: 700;
+  font-family: 'JetBrains', monospace;
   margin: 10px 0 0 0;
   padding: 0;
   line-height: 1;
   font-size: 20px;
-  line-height: 26px;
 }
 
 #hero .icon-box h3 a {
