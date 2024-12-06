@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'django_htmx',
     'django_ajax',
-    'djapp',
+    'djapp'
+
 ]
 
 MIDDLEWARE = [
@@ -109,24 +110,32 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-DATABASE_URL = str(os.getenv('DATABASE_URL'))
+if ENVIRONMENT == 'production':
+    DATABASE_URL = str(os.getenv('DATABASE_URL'))
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': str(os.getenv('DB_NAME')),
-        'USER': str(os.getenv('DB_USER')),
-        'PASSWORD': str(os.getenv('DB_PASSWORD')),
-        'HOST': str(os.getenv('DB_HOST')),
-        'PORT': os.getenv('DB_PORT'),
-    },
-}
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': str(os.getenv('DB_NAME')),
+            'USER': str(os.getenv('DB_USER')),
+            'PASSWORD': str(os.getenv('DB_PASSWORD')),
+            'HOST': str(os.getenv('DB_HOST')),
+            'PORT': os.getenv('DB_PORT'),
+        },
+    }
 
-DATABASES['default'] = dj_database_url.config(
-    default=str(os.getenv('DATABASE_URL')),
-    conn_max_age=600,
-    conn_health_checks=True,
-)
+    DATABASES['default'] = dj_database_url.config(
+        default=str(os.getenv('DATABASE_URL')),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
 
 
 AUTH_PASSWORD_VALIDATORS = [

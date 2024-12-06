@@ -11,6 +11,7 @@ class DjServices(models.Model):
     class Meta:
         verbose_name = "DJ Service"
         verbose_name_plural = "DJ Services"
+        app_label = 'djapp'
 
     def __str__(self) -> str:
         return self.dj_service_name
